@@ -1,9 +1,8 @@
 <%- include("partials/_header") %>
 <% if(auth === "false") { %>
   <%- include("partials/_navbar_reg"); %>
-  <%- include("leaderboards"); %>
-  <%- include("games"); %>
-  <%- include("players"); %>
+  <%- include("title"); %>
+  <%- include("players_registration"); %>
   <%- include('partials/_footer'); %>
  <% } else{ %>
   <%- include("partials/_navbar_name"); %>
