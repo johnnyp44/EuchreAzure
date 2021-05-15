@@ -1,0 +1,65 @@
+<!-- LEADERBOARDS -->
+<section class="colored-section" id="leaderboards">
+  <div id="leaderboards-carousel" class="carousel slide" data-ride="false">
+    <ol class="carousel-indicators">
+      <li data-target="#leaderboards-carousel" data-slide-to="0" class="active"></li>
+      <!-- <li data-target="#leaderboards-carousel" data-slide-to="1"></li> -->
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active container-fluid">
+        <!-- LeaderBoard Cards-->
+          <div class="row text-center">
+
+            <div class="col">
+              <div class="card card-games">
+                <div class="card-header card-header-colored">
+                  <h3>OG LeaderBoard</h3>
+                </div>
+                <div class="card-body card-body-colored">
+                  <div class="row">
+                    <div class="col">
+                      <p><em>Player</em><br />
+                         <%= PlayerData[0].firstName %><br />
+                         <%= PlayerData[1].firstName %><br />
+                         <%= PlayerData[2].firstName %><br />
+                         <%= PlayerData[3].firstName %><br />
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p><em>W-L</em><br />
+                         <%= PlayerData[0].gamesWon  %> -
+                         <%= PlayerData[0].gamesLost %> <br />
+                         <%= PlayerData[1].gamesWon  %> -
+                         <%= PlayerData[1].gamesLost %> <br />
+                         <%= PlayerData[2].gamesWon  %> -
+                         <%= PlayerData[2].gamesLost %> <br />
+                         <%= PlayerData[3].gamesWon  %> -
+                         <%= PlayerData[3].gamesLost %> <br />
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p><em>Score</em><br />
+                         <%= PlayerData[0].totalScore %><br />
+                         <%= PlayerData[1].totalScore %><br />
+                         <%= PlayerData[2].totalScore %><br />
+                         <%= PlayerData[3].totalScore %><br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#leaderboards-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#leaderboards-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>

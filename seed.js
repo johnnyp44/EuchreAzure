@@ -2,9 +2,11 @@
 const Game       = require("./models/Game");
 const League     = require("./models/League");
 const Player     = require("./models/Player");
+const Post       = require("./models/Post");
 const gameData   = require("./data/games.json");
 const leagueData = require("./data/leagues.json");
 const playerData = require("./data/players_all.json");
+const postData   = require("./data/post.json");
 
 require("./config")();
 
@@ -35,8 +37,19 @@ const seedLeagues = async () => {
   }
 };
 
-seedGames();
-seedLeagues();
-seedPlayers();
+const seedPosts = async () => {
+  try {
+    await Post.insertMany(postData);
+    console.log("post data seeded");
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+
+seedPosts();
+//seedGames();
+//seedLeagues();
+//seedPlayers();
 
 //process.exit();

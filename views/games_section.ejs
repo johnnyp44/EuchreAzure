@@ -9,26 +9,28 @@
       <div class="carousel-item active container-fluid">
         <h2> OG Games</h2>
         <!-- Game Cards-->
-        <% for (var i=0; i<OGgames.length; i++){ %>
+        <% for (var i=0; i<OGGames.length; i++){ %>
           <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <div class="col">
               <div class="card card-games">
                 <div class="card-header card-header-colored">
-                  <h3><%= OGgames[i].gameDate.toISOString().split('T')[0] %> <br /></h3>
-                  <h5>Game #<%= OGgames[i].gameID %></h5>
+                  <h5><%= OGGames[i].gameDate.toISOString().split('T')[0] %> <br /></h5>
+                  <h5>Game #<%= OGGames[i].gameID %></h5>
                 </div>
                 <div class="card-body card-body-colored">
                   <div class="row">
                     <div class="col">
-                      <h5>Team 1 - <%= OGgames[i].team1Score %></h5>
-                      <p><%= Players[(OGgames[i].T1P1)-1].firstName %><br />
-                         <%= Players[(OGgames[i].T1P2)-1].firstName %>
+                      <h5>Team 1 <br />
+                         <%= OGGames[i].team1Score %></h5>
+                      <p><%= Players[(OGGames[i].T1P1)-1].firstName %><br />
+                         <%= Players[(OGGames[i].T1P2)-1].firstName %>
                       </p>
                     </div>
                     <div class="col">
-                      <h5>Team 2 - <%= OGgames[i].team2Score %></h5>
-                      <p><%= Players[(OGgames[i].T2P1)-1].firstName %> <br />
-                         <%= Players[(OGgames[i].T2P2)-1].firstName %>
+                      <h5>Team 2 <br />
+                         <%= OGGames[i].team2Score %></h5>
+                      <p><%= Players[(OGGames[i].T2P1)-1].firstName %> <br />
+                         <%= Players[(OGGames[i].T2P2)-1].firstName %>
                       </p>
                     </div>
                   </div>
@@ -36,26 +38,28 @@
               </div>
             </div>
             <% i++; %>
-            <% if (i<OGgames.length){ %>
+
+            <% if (i<OGGames.length){ %>
               <div class="col">
                 <div class="card card-games">
                   <div class="card-header card-header-colored">
-
-                    <h3><%= OGgames[i].gameDate.toISOString().split('T')[0] %> <br /></h3>
-                    <h5>Game #<%= OGgames[i].gameID %></h5>
+                    <h5><%= OGGames[i].gameDate.toISOString().split('T')[0] %> <br /></h5>
+                    <h5>Game #<%= OGGames[i].gameID %></h5>
                   </div>
                   <div class="card-body card-body-colored">
                     <div class="row">
                       <div class="col">
-                        <h5>Team 1 - <%= OGgames[i].team1Score %></h5>
-                        <p><%= Players[(OGgames[i].T1P1)-1].firstName %><br />
-                           <%= Players[(OGgames[i].T1P2)-1].firstName %>
+                        <h5>Team 1 <br />
+                           <%= OGGames[i].team1Score %></h5>
+                        <p><%= Players[(OGGames[i].T1P1)-1].firstName %><br />
+                           <%= Players[(OGGames[i].T1P2)-1].firstName %>
                         </p>
                       </div>
                       <div class="col">
-                        <h5>Team 2 - <%= OGgames[i].team2Score %></h5>
-                        <p><%= Players[(OGgames[i].T2P1)-1].firstName %> <br />
-                           <%= Players[(OGgames[i].T2P2)-1].firstName %>
+                        <h5>Team 2 <br />
+                           <%= OGGames[i].team2Score %></h5>
+                        <p><%= Players[(OGGames[i].T2P1)-1].firstName %> <br />
+                           <%= Players[(OGGames[i].T2P2)-1].firstName %>
                         </p>
                       </div>
                     </div>
@@ -64,26 +68,27 @@
               </div>
             <% } %>
             <% i++; %>
-            <% if (i<OGgames.length){ %>
+            <% if (i<OGGames.length){ %>
               <div class="col">
                 <div class="card card-games">
                   <div class="card-header card-header-colored">
-
-                    <h3><%= OGgames[i].gameDate.toISOString().split('T')[0] %> <br /></h3>
-                    <h5>Game #<%= OGgames[i].gameID %></h5>
+                    <h5><%= OGGames[i].gameDate.toISOString().split('T')[0] %> <br /></h5>
+                    <h5>Game #<%= OGGames[i].gameID %></h5>
                   </div>
                   <div class="card-body card-body-colored">
                     <div class="row">
                       <div class="col">
-                        <h5>Team 1 - <%= OGgames[i].team1Score %></h5>
-                        <p><%= Players[(OGgames[i].T1P1)-1].firstName %><br />
-                           <%= Players[(OGgames[i].T1P2)-1].firstName %>
+                        <h5>Team 1 <br />
+                           <%= OGGames[i].team1Score %></h5>
+                        <p><%= Players[(OGGames[i].T1P1)-1].firstName %><br />
+                           <%= Players[(OGGames[i].T1P2)-1].firstName %>
                         </p>
                       </div>
                       <div class="col">
-                        <h5>Team 2 - <%= OGgames[i].team2Score %></h5>
-                        <p><%= Players[(OGgames[i].T2P1)-1].firstName %> <br />
-                           <%= Players[(OGgames[i].T2P2)-1].firstName %>
+                        <h5>Team 2 <br />
+                           <%= OGGames[i].team2Score %></h5>
+                        <p><%= Players[(OGGames[i].T2P1)-1].firstName %> <br />
+                           <%= Players[(OGGames[i].T2P2)-1].firstName %>
                         </p>
                       </div>
                     </div>

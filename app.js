@@ -3,6 +3,7 @@ const appInsights = require("applicationinsights");
 const ejs = require("ejs");
 const path = require('path');
 const app = express();
+
 require("./config")();
 //Azure Portal Application Insights
 appInsights.setup('327fb52c-4445-40be-8bac-247428924e13').start();
@@ -16,10 +17,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //ROUTES
-const gamesRoute = require("./routes/game");
-const indexRoute = require("./routes/index");
+const authRoute    = require("./router/authRouter");
+const indexRoute   = require("./router/indexRouter");
+const gamesRoute   = require("./router/gamesRouter");
+const leadersRoute = require("./router/leaderBoardRouter");
 
+//app.use("/", postRoute);
 app.use("/", indexRoute);
+app.use("/auth", authRoute);
+app.use("/games", gamesRoute);
+app.use("/leaderboards", leadersRoute);
+
 
 const port = process.env.PORT || 3000;
 

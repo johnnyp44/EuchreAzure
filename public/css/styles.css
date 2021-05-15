@@ -69,13 +69,13 @@ p{
 /* Title Section*/
 #title .container-fluid{
   padding: 1% 10% 1%;
-    text-align: left;
+  text-align: left;
 }
 .title-image{
   width: 50%;
   transform: rotate(20deg);
   position: absolute;
-  right: 20%
+  right: 15%
 }
 /* Leaderboards Section  */
 #leaderboards{
@@ -122,6 +122,7 @@ p{
 }
 /* Footer Section */
 #footer{
+  position: relative;
 }
 .social-icon{
   color: #fff;
@@ -132,7 +133,7 @@ p{
   color: #008891;
 }
 
-@media (max-width:1028px){
+@media (max-width:900px){
   #title{
     text-align: center;
   }
