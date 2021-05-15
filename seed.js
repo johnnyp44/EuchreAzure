@@ -13,7 +13,7 @@ require("./config")();
 const seedPlayers = async () => {
   try {
     await Player.insertMany(playerData);
-    console.log("game data seeded");
+    console.log("player data seeded");
   } catch (err) {
     console.log(err.message);
   }
@@ -31,7 +31,7 @@ const seedGames = async () => {
 const seedLeagues = async () => {
   try {
     await League.insertMany(leagueData);
-    console.log("player data seeded");
+    console.log("league data seeded");
   } catch (err) {
     console.log(err.message);
   }
@@ -47,9 +47,9 @@ const seedPosts = async () => {
 };
 
 
-seedPosts();
-//seedGames();
-//seedLeagues();
-//seedPlayers();
+//seedPosts();
+seedGames();
+seedLeagues();
+seedPlayers();
 
 //process.exit();

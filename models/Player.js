@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const gamesPlayedSchema = new mongoose.Schema({
-  gameID  : {type: Number, require:true, unique:true},
+  gameID  : {type: Number, require:true},
   playerID: {type: Number},
   leagueID: {type: Number},
   score   : {type: Number},

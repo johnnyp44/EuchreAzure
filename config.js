@@ -8,8 +8,8 @@ const connectDB = () => {
   return mongoose
     .connect(
       //`mongodb://localhost:27017/EuchreStats`,
-      //`mongodb://${DB_USER}:${DB_PASSWORD}@euchrestats.mongo.cosmos.azure.com:10255/EuchreStats?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@euchrestats@`,
-      `mongodb+srv://${DB_USER_MONGO}:${DB_PASSWORD_MONGO}@euchrestats.xtby3.mongodb.net/EuchreStats?retryWrites=true&w=majority`,
+      `mongodb://${DB_USER}:${DB_PASSWORD}@euchrestats.mongo.cosmos.azure.com:10255/EuchreStats?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@euchrestats@`,
+      //`mongodb+srv://${DB_USER_MONGO}:${DB_PASSWORD_MONGO}@euchrestats.xtby3.mongodb.net/EuchreStats?retryWrites=true&w=majority`,
       {
         useCreateIndex: true,
         useNewUrlParser: true,
