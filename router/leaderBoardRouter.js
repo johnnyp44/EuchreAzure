@@ -15,13 +15,12 @@ leaderBoardRouter.use((req, res, next) => {
   return next();
 });
 
-//IDEA ONE
 
+//IDEA ONE
 const Player = require("../models/Player");
 
 leaderBoardRouter.get('/', async function(req, res, next) {
-  //const PlayersData = await Player.find().sort({playerID:1}).exec();
-  const PlayersData = await Player.aggregate([
+  const OGPlayersData = await Player.aggregate([
     {$match: {"gamesPlayed.leagueID":1}},
     {$unwind: "$gamesPlayed"},
     {$group: {"_id"        : "$_id",
@@ -30,16 +29,11 @@ leaderBoardRouter.get('/', async function(req, res, next) {
               "gamesWon"   : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","W"]},1,0]}},
               "gamesLost"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","L"]},1,0]}},
               "totalScore" : {"$sum": "$gamesPlayed.score"}
-    }},
-    {$sort: {totalScore: -1}}
+    }}
     ]).exec();
-  console.log("PlayerData in leaderboard ", PlayersData);
-  res.render('leaders_index', {auth:"false",PlayerData:PlayersData});
+  OGPlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
+  console.log("PlayerData in leaderboard ", OGPlayersData);
+  res.render('leaders_index', {auth:"false",PlayerData:OGPlayersData});
 });
-
-// //IDEA TWO
-//gamesRouter.get('/',gamesController.getOGGames); //{
-//  res.render('games_index', {auth:"false",OGGames:OGGames,FamGames:FamGames});
-// });
 
 module.exports = leaderBoardRouter;

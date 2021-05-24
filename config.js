@@ -13,7 +13,7 @@ const connectDB = () => {
       {
         useCreateIndex: true,
         useNewUrlParser: true,
-        useFindAndModify: false,
+        useFindAndModify: true,
         useUnifiedTopology: true,
       }
     )
