@@ -22,17 +22,17 @@ const Game = require("../models/Game");
 const Player = require("../models/Player");
 
 gamesRouter.get('/', async function(req, res, next) {
-  const AllGames = await Game.find().exec();
-  const OGGames = AllGames.filter(game => game.leagueID === 1);
-  const FamGames = AllGames.filter(game => game.leagueID === 2);
-  //console.log(FamGames);
-  //const OGGames = await Game.find({leagueID:1}).sort({gameDate:-1}).limit(6).exec();
-  //const Players = await Player.find().sort({playerID:1}).exec();
-  const Players = await Player.find().exec();
-  //const Players = AllPlayers
-  //const FamGames = await Game.find({leagueID:2}).sort({gameDate:-1}).limit(6).exec();
-  //console.log("In router OGGames is :", OGGames);
-  res.render('games_index', {auth:"false",OGGames:OGGames,FamGames:FamGames, Players:Players});
+  try{
+    const AllGames = await Game.find().exec();
+    const Players = await Player.find().exec();
+    const OGGames = AllGames.filter(game => game.leagueID === 1);
+    const FamGames = AllGames.filter(game => game.leagueID === 2);
+    res.render('games_index', {auth:"false",OGGames:OGGames,FamGames:FamGames, Players:Players});
+  }catch(e){
+    console.log(e);
+    res.render('error_index',{auth:"false"} );
+  }
+
 });
 
 // //IDEA TWO

@@ -20,20 +20,25 @@ leaderBoardRouter.use((req, res, next) => {
 const Player = require("../models/Player");
 
 leaderBoardRouter.get('/', async function(req, res, next) {
-  const OGPlayersData = await Player.aggregate([
-    {$match: {"gamesPlayed.leagueID":1}},
-    {$unwind: "$gamesPlayed"},
-    {$group: {"_id"        : "$_id",
-              "firstName"  : {"$first": "$firstName" },
-              "playerID"   : {"$first": "$playerID"},
-              "gamesWon"   : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","W"]},1,0]}},
-              "gamesLost"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","L"]},1,0]}},
-              "totalScore" : {"$sum": "$gamesPlayed.score"}
-    }}
-    ]).exec();
-  OGPlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
-  console.log("PlayerData in leaderboard ", OGPlayersData);
-  res.render('leaders_index', {auth:"false",PlayerData:OGPlayersData});
+  try {
+    const OGPlayersData = await Player.aggregate([
+      {$match: {"gamesPlayed.leagueID":1}},
+      {$unwind: "$gamesPlayed"},
+      {$group: {"_id"        : "$_id",
+                "firstName"  : {"$first": "$firstName" },
+                "playerID"   : {"$first": "$playerID"},
+                "gamesWon"   : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","W"]},1,0]}},
+                "gamesLost"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","L"]},1,0]}},
+                "totalScore" : {"$sum": "$gamesPlayed.score"}
+      }}
+      ]).exec();
+    OGPlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
+    console.log("PlayerData in leaderboard ", OGPlayersData);
+    res.render('leaders_index', {auth:"false",PlayerData:OGPlayersData});
+  }catch(e){
+    console.log(e);
+    res.render('error_index',{auth:"false"} );
+  }
 });
 
 module.exports = leaderBoardRouter;
