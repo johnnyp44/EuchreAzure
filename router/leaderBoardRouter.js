@@ -22,13 +22,14 @@ const Player = require("../models/Player");
 leaderBoardRouter.get('/', async function(req, res, next) {
   try {
     const OGPlayersData = await Player.aggregate([
-      {$match: {"gamesPlayed.leagueID":1}},
       {$unwind: "$gamesPlayed"},
+      {$match: {"gamesPlayed.leagueID":1}},
       {$group: {"_id"        : "$_id",
                 "firstName"  : {"$first": "$firstName" },
                 "playerID"   : {"$first": "$playerID"},
                 "gamesWon"   : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","W"]},1,0]}},
                 "gamesLost"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","L"]},1,0]}},
+                //"totalGames" : {"$sum": ["gamesWon", "gamesLost"]}, //not working yet
                 "totalScore" : {"$sum": "$gamesPlayed.score"}
       }}
       ]).exec();
