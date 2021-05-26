@@ -19,8 +19,8 @@ p{
 /* Headings Sections */
 .big-heading{
   color: #e7e7de;
-  font-size: 3.5rem;
-  line-height: 1.5;
+  font-size: 2.0rem;
+  line-height: 1.0;
 }
 .section-heading{
   font-size: 3rem;
@@ -49,6 +49,8 @@ p{
 .navbar{
   padding: 0 0 10px;
   background-color: #0f3057;
+  position: relative;
+  z-index: +1;
 }
 .navbar-brand{
   font-family: 'Ubuntu', sans-serif;
@@ -72,21 +74,40 @@ p{
   text-align: left;
 }
 .title-image{
-  width: 50%;
+  width: 30%;
   transform: rotate(20deg);
-  position: absolute;
-  right: 15%
+  position: relative;
+  right: 1%;
 }
 /* Leaderboards Section  */
 #leaderboards{
   padding: 100px;
   position: relative;
 }
+.card-leaders{
+  padding: 2% 2%;
+}
 .leaderboards-column {
   padding: 3% 2%;
 }
 /* Games Section */
 #games{
+}
+.carousel-indicators {
+  top: 10px;
+  text-align: center;
+}
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 100%;
+}
+.carousel-indicators li:not(:last-child) {
+  text-align: center;
+}
+.games-header{
+  padding: 15px 0px 10px;
 }
 .games-image{
   width: 10%;
@@ -123,6 +144,8 @@ p{
 /* Footer Section */
 #footer{
   position: relative;
+  bottom: 0;
+  width: 100%;
 }
 .social-icon{
   color: #fff;
@@ -133,7 +156,7 @@ p{
   color: #008891;
 }
 
-@media (max-width:900px){
+/* @media (max-width:1600px){
   #title{
     text-align: center;
   }
@@ -141,7 +164,7 @@ p{
     position: static;
     transform: rotate(0);
   }
-}
+} */
 
 /* Features Section*/
 /* #features{

@@ -26,7 +26,9 @@ gamesRouter.get('/', async function(req, res, next) {
     const AllGames = await Game.find().exec();
     const Players = await Player.find().exec();
     const OGGames = AllGames.filter(game => game.leagueID === 1);
+    OGGames.sort(function(a,b){return b.gameID-a.gameID});
     const FamGames = AllGames.filter(game => game.leagueID === 2);
+    FamGames.sort(function(a,b){return b.gameID-a.gameID});
     res.render('games_index', {auth:"false",OGGames:OGGames,FamGames:FamGames, Players:Players});
   }catch(e){
     console.log(e);

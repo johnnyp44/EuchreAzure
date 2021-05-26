@@ -33,7 +33,7 @@ leaderBoardRouter.get('/', async function(req, res, next) {
       }}
       ]).exec();
     OGPlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
-    console.log("PlayerData in leaderboard ", OGPlayersData);
+    //console.log("PlayerData in leaderboard ", OGPlayersData);
     res.render('leaders_index', {auth:"false",PlayerData:OGPlayersData});
   }catch(e){
     console.log(e);
