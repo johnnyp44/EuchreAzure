@@ -59,7 +59,13 @@
       {"gameID":52,"playerID":1,"score":7,"winLoss":"W","leagueID":1,"createdAt": "2020-04-22T12:00:00.001Z","updatedAt": "2020-04-22T12:00:00.001Z"},
       {"gameID":53,"playerID":1,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2020-04-22T12:00:00.001Z","updatedAt": "2020-04-22T12:00:00.001Z"},
       {"gameID":54,"playerID":1,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2020-04-22T12:00:00.001Z","updatedAt": "2020-04-22T12:00:00.001Z"},
-      {"gameID":55,"playerID":1,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"}
+      {"gameID":55,"playerID":1,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"},
+      {"gameID":56,"playerID":1,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-26T12:00:00.001Z","updatedAt": "2021-05-26T12:00:00.001Z"},
+      {"gameID":57,"playerID":1,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-02T12:00:00.001Z","updatedAt": "2021-06-02T12:00:00.001Z"},
+      {"gameID":58,"playerID":1,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-06-09T12:00:00.001Z","updatedAt": "2021-06-09T12:00:00.001Z"},
+      {"gameID":59,"playerID":1,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-16T12:00:00.001Z","updatedAt": "2021-06-16T12:00:00.001Z"},
+      {"gameID":60,"playerID":1,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2021-06-30T12:00:00.001Z","updatedAt": "2021-06-30T12:00:00.001Z"},
+      {"gameID":61,"playerID":1,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-07-07T12:00:00.001Z","updatedAt": "2021-07-07T12:00:00.001Z"}
     ],
     "leaguesOwned":[1,2]
   },
@@ -123,7 +129,13 @@
       {"gameID":52,"playerID":2,"score":7,"winLoss":"W","leagueID":1,"createdAt": "2021-05-01T00:00:00.001Z","updatedAt": "2021-05-01T00:00:00.001Z"},
       {"gameID":53,"playerID":2,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-01T00:00:00.001Z","updatedAt": "2021-05-01T00:00:00.001Z"},
       {"gameID":54,"playerID":2,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2020-04-22T12:00:00.001Z","updatedAt": "2020-04-22T12:00:00.001Z"},
-      {"gameID":55,"playerID":2,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"}
+      {"gameID":55,"playerID":2,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"},
+      {"gameID":56,"playerID":2,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-26T12:00:00.001Z","updatedAt": "2021-05-26T12:00:00.001Z"},
+      {"gameID":57,"playerID":2,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-06-02T12:00:00.001Z","updatedAt": "2021-06-02T12:00:00.001Z"},
+      {"gameID":58,"playerID":2,"score":7,"winLoss":"W","leagueID":1,"createdAt": "2021-06-09T12:00:00.001Z","updatedAt": "2021-06-09T12:00:00.001Z"},
+      {"gameID":59,"playerID":2,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-16T12:00:00.001Z","updatedAt": "2021-06-16T12:00:00.001Z"},
+      {"gameID":60,"playerID":2,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2021-06-30T12:00:00.001Z","updatedAt": "2021-06-30T12:00:00.001Z"},
+      {"gameID":61,"playerID":2,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-07-07T12:00:00.001Z","updatedAt": "2021-07-07T12:00:00.001Z"}
     ]
   },
   {"playerID":3,
@@ -185,7 +197,13 @@
       {"gameID":52,"playerID":3,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-05-01T00:00:00.001Z","updatedAt": "2021-05-01T00:00:00.001Z"},
       {"gameID":53,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-01T00:00:00.001Z","updatedAt": "2021-05-01T00:00:00.001Z"},
       {"gameID":54,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2020-04-22T12:00:00.001Z","updatedAt": "2020-04-22T12:00:00.001Z"},
-      {"gameID":55,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"}
+      {"gameID":55,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"},
+      {"gameID":56,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-26T12:00:00.001Z","updatedAt": "2021-05-26T12:00:00.001Z"},
+      {"gameID":57,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-02T12:00:00.001Z","updatedAt": "2021-06-02T12:00:00.001Z"},
+      {"gameID":58,"playerID":3,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-06-09T12:00:00.001Z","updatedAt": "2021-06-09T12:00:00.001Z"},
+      {"gameID":59,"playerID":3,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2021-06-16T12:00:00.001Z","updatedAt": "2021-06-16T12:00:00.001Z"},
+      {"gameID":60,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-30T12:00:00.001Z","updatedAt": "2021-06-30T12:00:00.001Z"},
+      {"gameID":61,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-07-07T12:00:00.001Z","updatedAt": "2021-07-07T12:00:00.001Z"}
     ]
   },
   {"playerID":4,
@@ -247,7 +265,13 @@
       {"gameID":52,"playerID":4,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-05-01T00:00:00.001Z","updatedAt": "2021-05-01T00:00:00.001Z"},
       {"gameID":53,"playerID":4,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-05-01T00:00:00.001Z","updatedAt": "2021-05-01T00:00:00.001Z"},
       {"gameID":54,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2020-04-22T12:00:00.001Z","updatedAt": "2020-04-22T12:00:00.001Z"},
-      {"gameID":55,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"}
+      {"gameID":55,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-19T12:00:00.001Z","updatedAt": "2021-05-19T12:00:00.001Z"},
+      {"gameID":56,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-05-26T12:00:00.001Z","updatedAt": "2021-05-26T12:00:00.001Z"},
+      {"gameID":57,"playerID":4,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-06-02T12:00:00.001Z","updatedAt": "2021-06-02T12:00:00.001Z"},
+      {"gameID":58,"playerID":4,"score":7,"winLoss":"W","leagueID":1,"createdAt": "2021-06-09T12:00:00.001Z","updatedAt": "2021-06-09T12:00:00.001Z"},
+      {"gameID":59,"playerID":4,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2021-06-16T12:00:00.001Z","updatedAt": "2021-06-16T12:00:00.001Z"},
+      {"gameID":60,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-30T12:00:00.001Z","updatedAt": "2021-06-30T12:00:00.001Z"},
+      {"gameID":61,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-07-07T12:00:00.001Z","updatedAt": "2021-07-07T12:00:00.001Z"}
     ]
   },
   {"playerID":5,

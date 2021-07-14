@@ -21,6 +21,7 @@ const Player = require("../models/Player");
 
 leaderBoardRouter.get('/', async function(req, res, next) {
   try {
+    console.log("Router is: /leaderBoardRouter");
     const OGPlayersData = await Player.aggregate([
       {$unwind: "$gamesPlayed"},
       {$match: {"gamesPlayed.leagueID":1}},

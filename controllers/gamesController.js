@@ -1,22 +1,15 @@
 //MODEL ASSOCIATION
-const Game = require("../models/Game");
-var mongoose = require('mongoose');
+// const Game = require("../models/Game");
+// const GamesPlayed = require("../models/GamesPlayed");
+// const Player = require("../models/Player")
+// var mongoose = require('mongoose');
 
-//console.log("In Games Controller");
 
-// exports.getOGGames =  function() {
-//   return Game.find({leagueID:1}).sort({gameDate:-1}).limit(6).exec();
-// };
-
-// exports.getFamGames =  async () => {
-//   try{
-//     await Game.find(({leagueID:2}).sort({gameDate:-1}).limit(6),function(err,res){
-//       if(!err){
-//         console.log('Response from controller', res);
-//         return res;
-//       }
-//     });
-//   }catch(e){
-//     next(e);
-//   }
-// };
+exports.addGame = function (game){
+  console.log("In games controller - addGame");
+  console.log(game);
+  game.save(function (err, game) {
+    if (err) return console.error(err);
+      console.log(game.gameID + " saved to games collection.");
+  });
+}

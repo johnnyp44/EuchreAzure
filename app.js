@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 //ROUTES
 const authRoute    = require("./router/authRouter");
@@ -23,10 +23,10 @@ const gamesRoute   = require("./router/gamesRouter");
 const leadersRoute = require("./router/leaderBoardRouter");
 
 //app.use("/", postRoute);
-app.use("/", indexRoute);
-app.use("/auth", authRoute);
-app.use("/games", gamesRoute);
-app.use("/leaderboards", leadersRoute);
+app.use('/', indexRoute);
+app.use('/auth', authRoute);
+app.use('/games', gamesRoute);
+app.use('/leaderboards', leadersRoute);
 
 
 const port = process.env.PORT || 3000;

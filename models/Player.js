@@ -6,8 +6,8 @@ const gamesPlayedSchema = new mongoose.Schema({
   leagueID: {type: Number},
   score   : {type: Number},
   winLoss : {type: String},
-  createdAt: {type: Date},
-  updatedAt: {type: Date}
+  createdAt: {type: Date, required:true, default: Date.now},
+  updatedAt: {type: Date, required:true, default: Date.now}
 });
 
 const playerSchema = new mongoose.Schema({
@@ -18,8 +18,8 @@ const playerSchema = new mongoose.Schema({
   enrollmentDate: {type: Date},
   gamesPlayed: [gamesPlayedSchema],
   leaguesOwned: {type: Array},
-  createdAt: {type: Date},
-  updatedAt: {type: Date}
+  createdAt: {type: Date, required:true, default: Date.now},
+  updatedAt: {type: Date, required:true, default: Date.now}
 });
 
 const Player = mongoose.model("Player", playerSchema);

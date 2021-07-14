@@ -48,8 +48,8 @@ const seedPosts = async () => {
 
 
 //seedPosts();
+//seedLeagues();
 seedGames();
-seedLeagues();
 seedPlayers();
 
 //process.exit();

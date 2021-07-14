@@ -10,8 +10,8 @@ const gameSchema = new mongoose.Schema({
   T2P2: {type: Number},
   team1Score: {type: Number},
   team2Score: {type: Number},
-  createdAt: {type: Date},
-  updatedAt: {type: Date}
+  createdAt: {type: Date, required:true, default: Date.now},
+  updatedAt: {type: Date, required:true, default: Date.now}
 });
 
 const Game = mongoose.model("Game", gameSchema);
