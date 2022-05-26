@@ -24,7 +24,7 @@ leaderBoardRouter.get('/', async function(req, res, next) {
     console.log("Router is: /leaderBoardRouter");
     const OGPlayersData = await Player.aggregate([
       {$unwind: "$gamesPlayed"},
-      {$match: {"gamesPlayed.leagueID":1}},
+      {$match: {"gamesPlayed.leagueID":3}},
       {$group: {"_id"        : "$_id",
                 "firstName"  : {"$first": "$firstName" },
                 "playerID"   : {"$first": "$playerID"},

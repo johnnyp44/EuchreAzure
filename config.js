@@ -12,9 +12,7 @@ const connectDB = () => {
   return mongoose
     .connect(url,
       {
-        useCreateIndex: true,
         useNewUrlParser: true,
-        useFindAndModify: true,
         useUnifiedTopology: true,
       }
     )
