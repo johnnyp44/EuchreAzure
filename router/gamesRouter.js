@@ -34,7 +34,9 @@ gamesRouter.get('/list', async function(req, res, next) {
     OGGames.sort(function(a,b){return b.gameID-a.gameID});
     const FamGames = AllGames.filter(game => game.leagueID === 2);
     FamGames.sort(function(a,b){return b.gameID-a.gameID});
-    res.render('games_index', {auth:"false",OGGames:OGGames,FamGames:FamGames, Players:Players});
+    const OG150Games = AllGames.filter(game => game.leagueID === 3);
+    OG150Games.sort(function(a,b){return b.gameID-a.gameID});
+    res.render('games_index', {auth:"false",OGGames:OGGames,FamGames:FamGames,OG150Games:OG150Games,Players:Players});
   }catch(e){
     console.log(e);
     res.render('error_index',{auth:"false"} );

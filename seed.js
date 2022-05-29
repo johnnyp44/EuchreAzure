@@ -49,7 +49,7 @@ const seedPosts = async () => {
 
 //seedPosts();
 //seedLeagues();
-seedGames();
+//seedGames();
 seedPlayers();
 
 //process.exit();

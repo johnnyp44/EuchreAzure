@@ -1,14 +1,20 @@
 [
   {
-    "leagueID":1,
-    "leagueName":"The OG League",
-    "createdAt": "2020-04-01T12:00:00.001Z",
-    "updatedAt": "2020-04-01T12:00:00.001Z"
-  },
-  {
-    "leagueID":2,
-    "leagueName":"The Family League",
-    "createdAt": "2020-04-01T12:00:00.001Z",
-    "updatedAt": "2020-04-01T12:00:00.001Z"
-  }
+    "leagueID" : 1,
+    "leagueName" : "The OG League",
+    "createdAt" : "2020-04-01T12:00:00.001Z",
+    "updatedAt" : "2020-04-01T12:00:00.001Z"
+},
+{
+    "leagueID" : 2,
+    "leagueName" : "The Family League",
+    "createdAt" : "2020-04-01T12:00:00.001Z",
+    "updatedAt" : "2020-04-01T12:00:00.001Z"
+},
+{
+    "leagueID" : 3,
+    "leagueName" : "3rd 50",
+    "createdAt" : "2022-05-25 12:00:00.001Z",
+    "updatedAt" : "2022-05-25 12:00:00.001Z"
+}
 ]

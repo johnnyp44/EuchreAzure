@@ -2,12 +2,14 @@
 <section class="colored-section" id="games">
   <div id="games-carousel" class="carousel slide" data-ride="false">
     <ol class="carousel-indicators">
-      <li data-target="#games-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#games-carousel" data-slide-to="0"></li>
       <li data-target="#games-carousel" data-slide-to="1"></li>
+      <li data-target="#games-carousel" data-slide-to="2" class="active"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active container-fluid">
-        <h2 class="games-header"> OG Games </h2>
+      <!-- OG First 100 -->
+      <div class="carousel-item container-fluid">
+        <h2 class="games-header"> OG First 100 </h2>
         <!-- Game Cards-->
         <% for (var i=0; i<OGGames.length; i++){ %>
           <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -99,6 +101,7 @@
           </div>
         <% } %>
       </div>
+      
       <!--Family Games -->
       <div class="carousel-item container-fluid">
         <h2 class="games-header"> Family Games</h2>
@@ -193,6 +196,102 @@
           </div>
         <% } %>
       </div>
+
+      <!-- OG 3rd 50 -->
+      <div class="carousel-item active container-fluid">
+        <h2 class="games-header"> OG 3rd 50</h2>
+        <!-- Game Cards-->
+        <% for (var i=0; i<OG150Games.length; i++){ %>
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card card-games">
+                <div class="card-header card-header-colored">
+                  <h3><%= OG150Games[i].gameDate.toISOString().split('T')[0] %> <br /></h3>
+                  <h5>Game #<%= OG150Games[i].gameID %></h5>
+                </div>
+                <div class="card-body card-body-colored">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Team 1 <br />
+                        <%= OG150Games[i].team1Score %></h5>
+                      <p><%= Players[(OG150Games[i].T1P1)-1].firstName %><br />
+                         <%= Players[(OG150Games[i].T1P2)-1].firstName %>
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>Team 2 <br />
+                        <%= OG150Games[i].team2Score %></h5>
+                      <p><%= Players[(OG150Games[i].T2P1)-1].firstName %> <br />
+                         <%= Players[(OG150Games[i].T2P2)-1].firstName %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% i++; %>
+            <% if (i<OG150Games.length){ %>
+              <div class="col">
+                <div class="card card-games">
+                  <div class="card-header card-header-colored">
+                    <h3><%= OG150Games[i].gameDate.toISOString().split('T')[0] %> <br /></h3>
+                    <h5>Game #<%= OG150Games[i].gameID %></h5>
+                  </div>
+                  <div class="card-body card-body-colored">
+                    <div class="row">
+                      <div class="col">
+                        <h5>Team 1 <br />
+                          <%= OG150Games[i].team1Score %></h5>
+                        <p><%= Players[(OG150Games[i].T1P1)-1].firstName %><br />
+                           <%= Players[(OG150Games[i].T1P2)-1].firstName %>
+                        </p>
+                      </div>
+                      <div class="col">
+                        <h5>Team 2 <br />
+                           <%= OG150Games[i].team2Score %></h5>
+                        <p><%= Players[(OG150Games[i].T2P1)-1].firstName %> <br />
+                           <%= Players[(OG150Games[i].T2P2)-1].firstName %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+            <% i++; %>
+            <% if (i<OG150Games.length){ %>
+              <div class="col">
+                <div class="card card-games">
+                  <div class="card-header card-header-colored">
+
+                    <h3><%= OG150Games[i].gameDate.toISOString().split('T')[0] %> <br /></h3>
+                    <h5>Game #<%= OG150Games[i].gameID %></h5>
+                  </div>
+                  <div class="card-body card-body-colored">
+                    <div class="row">
+                      <div class="col">
+                        <h5>Team 1 <br />
+                          <%= OG150Games[i].team1Score %></h5>
+                        <p><%= Players[(OG150Games[i].T1P1)-1].firstName %><br />
+                           <%= Players[(OG150Games[i].T1P2)-1].firstName %>
+                        </p>
+                      </div>
+                      <div class="col">
+                        <h5>Team 2 <br />
+                          <%= OG150Games[i].team2Score %></h5>
+                        <p><%= Players[(OG150Games[i].T2P1)-1].firstName %> <br />
+                           <%= Players[(OG150Games[i].T2P2)-1].firstName %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+
     </div>
     <a class="carousel-control-prev" href="#games-carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

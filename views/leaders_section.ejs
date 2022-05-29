@@ -2,12 +2,97 @@
 <section class="colored-section" id="leaderboards">
   <div id="leaderboards-carousel" class="carousel slide" data-ride="false">
     <ol class="carousel-indicators">
-      <li data-target="#leaderboards-carousel" data-slide-to="0" class="active"></li>
-      <!-- <li data-target="#leaderboards-carousel" data-slide-to="1"></li> -->
+      <li data-target="#leaderboards-carousel" data-slide-to="0"></li>
+      <li data-target="#leaderboards-carousel" data-slide-to="1"></li>
+      <li data-target="#leaderboards-carousel" data-slide-to="2" class="active"></li>
     </ol>
     <div class="carousel-inner">
+      <!-- OG FIRST 100 -->
+      <div class="carousel-item container-fluid">
+        <h3 class="games-header">OG First 100</h3>
+          <div class="row text-center">
+            <div class="col">
+              <div class="card card-leaders">
+                <div class="card-body card-body-colored">
+                  <div class="row">
+                    <div class="col">
+                      <p><em>Player</em><br />
+                         <%= OGPlayerData[0].firstName %><br />
+                         <%= OGPlayerData[1].firstName %><br />
+                         <%= OGPlayerData[2].firstName %><br />
+                         <%= OGPlayerData[3].firstName %><br />
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p><em>W-L</em><br />
+                         <%= OGPlayerData[0].gamesWon  %> -
+                         <%= OGPlayerData[0].gamesLost %> <br />
+                         <%= OGPlayerData[1].gamesWon  %> -
+                         <%= OGPlayerData[1].gamesLost %> <br />
+                         <%= OGPlayerData[2].gamesWon  %> -
+                         <%= OGPlayerData[2].gamesLost %> <br />
+                         <%= OGPlayerData[3].gamesWon  %> -
+                         <%= OGPlayerData[3].gamesLost %> <br />
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p><em>Score</em><br />
+                         <%= OGPlayerData[0].totalScore %><br />
+                         <%= OGPlayerData[1].totalScore %><br />
+                         <%= OGPlayerData[2].totalScore %><br />
+                         <%= OGPlayerData[3].totalScore %><br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- FAMILY SCOREBOARD-->
+      <div class="carousel-item container-fluid">
+        <h3 class="games-header">Family League</h3>
+          <div class="row text-center">
+            <div class="col">
+              <div class="card card-leaders">
+                <div class="card-body card-body-colored">
+                  <div class="row">
+                    <div class="col">
+                      <p><em>Player</em><br />
+                         <%= FamPlayerData[0].firstName %><br />
+                         <%= FamPlayerData[1].firstName %><br />
+                         <%= FamPlayerData[2].firstName %><br />
+                         <%= FamPlayerData[3].firstName %><br />
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p><em>W-L</em><br />
+                         <%= FamPlayerData[0].gamesWon  %> -
+                         <%= FamPlayerData[0].gamesLost %> <br />
+                         <%= FamPlayerData[1].gamesWon  %> -
+                         <%= FamPlayerData[1].gamesLost %> <br />
+                         <%= FamPlayerData[2].gamesWon  %> -
+                         <%= FamPlayerData[2].gamesLost %> <br />
+                         <%= FamPlayerData[3].gamesWon  %> -
+                         <%= FamPlayerData[3].gamesLost %> <br />
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p><em>Score</em><br />
+                         <%= FamPlayerData[0].totalScore %><br />
+                         <%= FamPlayerData[1].totalScore %><br />
+                         <%= FamPlayerData[2].totalScore %><br />
+                         <%= FamPlayerData[3].totalScore %><br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- OG 3rd 50 -->
       <div class="carousel-item active container-fluid">
-        <!-- LeaderBoard Cards-->
         <h3 class="games-header">3rd 50</h3>
           <div class="row text-center">
             <div class="col">
@@ -16,30 +101,30 @@
                   <div class="row">
                     <div class="col">
                       <p><em>Player</em><br />
-                         <%= PlayerData[0].firstName %><br />
-                         <%= PlayerData[1].firstName %><br />
-                         <%= PlayerData[2].firstName %><br />
-                         <%= PlayerData[3].firstName %><br />
+                         <%= OG150PlayerData[0].firstName %><br />
+                         <%= OG150PlayerData[1].firstName %><br />
+                         <%= OG150PlayerData[2].firstName %><br />
+                         <%= OG150PlayerData[3].firstName %><br />
                       </p>
                     </div>
                     <div class="col">
                       <p><em>W-L</em><br />
-                         <%= PlayerData[0].gamesWon  %> -
-                         <%= PlayerData[0].gamesLost %> <br />
-                         <%= PlayerData[1].gamesWon  %> -
-                         <%= PlayerData[1].gamesLost %> <br />
-                         <%= PlayerData[2].gamesWon  %> -
-                         <%= PlayerData[2].gamesLost %> <br />
-                         <%= PlayerData[3].gamesWon  %> -
-                         <%= PlayerData[3].gamesLost %> <br />
+                         <%= OG150PlayerData[0].gamesWon  %> -
+                         <%= OG150PlayerData[0].gamesLost %> <br />
+                         <%= OG150PlayerData[1].gamesWon  %> -
+                         <%= OG150PlayerData[1].gamesLost %> <br />
+                         <%= OG150PlayerData[2].gamesWon  %> -
+                         <%= OG150PlayerData[2].gamesLost %> <br />
+                         <%= OG150PlayerData[3].gamesWon  %> -
+                         <%= OG150PlayerData[3].gamesLost %> <br />
                       </p>
                     </div>
                     <div class="col">
                       <p><em>Score</em><br />
-                         <%= PlayerData[0].totalScore %><br />
-                         <%= PlayerData[1].totalScore %><br />
-                         <%= PlayerData[2].totalScore %><br />
-                         <%= PlayerData[3].totalScore %><br />
+                         <%= OG150PlayerData[0].totalScore %><br />
+                         <%= OG150PlayerData[1].totalScore %><br />
+                         <%= OG150PlayerData[2].totalScore %><br />
+                         <%= OG150PlayerData[3].totalScore %><br />
                       </p>
                     </div>
                   </div>
@@ -47,7 +132,6 @@
               </div>
             </div>
           </div>
-          
       </div>
     </div>
     <a class="carousel-control-prev" href="#leaderboards-carousel" role="button" data-slide="prev">
