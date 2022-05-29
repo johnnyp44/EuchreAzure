@@ -19,24 +19,24 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 
 //ROUTES
-const authRoute    = require("./router/authRouter");
+//const authRoute    = require("./router/authRouter");
 const indexRoute   = require("./router/indexRouter");
 const gamesRoute   = require("./router/gamesRouter");
 const leadersRoute = require("./router/leaderBoardRouter");
 
 //app.use("/", postRoute);
 app.use('/', indexRoute);
-app.use('/auth', authRoute);
+//app.use('/auth', authRoute);
 app.use('/games', gamesRoute);
 app.use('/leaderboards', leadersRoute);
 
-app.get("/secrets", function(req, res){
-  if(req.isAuthenticated()){
-    res.render("secrets");
-  }else{
-    res.render('index', {auth:"Ya not logged in", });
-  }
-});
+// app.get("/secrets", function(req, res){
+//   if(req.isAuthenticated()){
+//     res.render("secrets");
+//   }else{
+//     res.render('index', {auth:"Ya not logged in", });
+//   }
+// });
 
 
 const port = process.env.PORT || 3000;
