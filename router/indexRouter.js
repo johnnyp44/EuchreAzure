@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index_', {
+  res.render('index', {
     title: 'EuchreStats',
     isAuthenticated: req.session.isAuthenticated,
     username: req.session.account?.username,
