@@ -1,12 +1,5 @@
 const mongoose = require("mongoose");
 
-// const googleUserSchema = new mongoose.Schema({
-//   googleId: String,
-//   email: String,
-//   given_name: String,
-//   family_name: String
-// });
-
 const gamesPlayedSchema = new mongoose.Schema({
   gameID  : {type: Number, require:true},
   playerID: {type: Number},
@@ -25,7 +18,6 @@ const playerSchema = new mongoose.Schema({
   enrollmentDate: {type: Date},
   gamesPlayed: [gamesPlayedSchema],
   leaguesOwned: {type: Array},
-  // googleUser: [googleUserSchema],
   createdAt: {type: Date, required:true, default: Date.now},
   updatedAt: {type: Date, required:true, default: Date.now}
 });

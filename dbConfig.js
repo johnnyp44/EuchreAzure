@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
 
-dotenv.config();
 //const { COSMOS_USER, COSMOS_PASSWORD, DB_USER_MONGO, DB_PASSWORD_MONGO} = process.env;
 //url = `mongodb://localhost:27017/EuchreStats`
 //url = `mongodb://${COSMOS_USER}:${COSMOS_PASSWORD}@euchrestats.mongo.cosmos.azure.com:10255/EuchreStats?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@euchrestats@`

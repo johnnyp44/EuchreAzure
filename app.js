@@ -1,43 +1,79 @@
-const express = require("express");
-const appInsights = require("applicationinsights");
-const ejs = require("ejs");
+require('dotenv').config();
+
 const path = require('path');
-const app = express();
+const express = require("express");
+const ejs = require("ejs");
+var session = require('express-session');
+var createError = require('http-errors');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
+const appInsights = require("applicationinsights");
 
-require("./config")();
+require("./dbConfig")();
+
 //Azure Portal Application Insights
 appInsights.setup('327fb52c-4445-40be-8bac-247428924e13').start();
+
+// initialize express
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(logger('dev'));
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 
-
 //ROUTES
-//const authRoute    = require("./router/authRouter");
+const authRoute    = require("./router/auth");
 const indexRoute   = require("./router/indexRouter");
+const playersRoute = require("./router/playersRouter");
 const gamesRoute   = require("./router/gamesRouter");
 const leadersRoute = require("./router/leaderBoardRouter");
+const usersRoute   = require("./router/users");
 
-//app.use("/", postRoute);
+
+
+/**
+ * Using express-session middleware for persistent user session. Be sure to
+ * familiarize yourself with available options. Visit: https://www.npmjs.com/package/express-session
+ */
+app.use(session({
+    secret: process.env.EXPRESS_SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure: false, // set this to true on production
+    }
+}));
+
 app.use('/', indexRoute);
-//app.use('/auth', authRoute);
+app.use('/auth', authRoute);
 app.use('/games', gamesRoute);
 app.use('/leaderboards', leadersRoute);
+app.use('/users', usersRoute);
+app.use('/players', playersRoute);
 
-// app.get("/secrets", function(req, res){
-//   if(req.isAuthenticated()){
-//     res.render("secrets");
-//   }else{
-//     res.render('index', {auth:"Ya not logged in", });
-//   }
-// });
 
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('index/error');
+});
 
 const port = process.env.PORT || 3000;
 

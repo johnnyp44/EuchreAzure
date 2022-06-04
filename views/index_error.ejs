@@ -1,0 +1,8 @@
+<%- include("_partials/_header") %>
+<% if (isAuthenticated) { %>
+    <%- include("_partials/_navbar_auth"); %>
+<% } else { %>
+    <%- include("_partials/_navbar_noauth"); %>
+<% } %>  
+<%- include("index/error"); %>
+<%- include('_partials/_footer'); %>

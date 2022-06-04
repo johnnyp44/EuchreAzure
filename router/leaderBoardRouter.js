@@ -69,7 +69,14 @@ leaderBoardRouter.get('/', async function(req, res, next) {
     OG150PlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
 
     //console.log("PlayerData in leaderboard ", OGPlayersData);
-    res.render('leaders_index', {auth:"false",OGPlayerData:OGPlayersData,FamPlayerData:FamPlayersData,OG150PlayerData:OG150PlayersData});
+    res.render('index_leaders', {
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name,
+      OGPlayerData:OGPlayersData,
+      FamPlayerData:FamPlayersData,
+      OG150PlayerData:OG150PlayersData
+    });
   }catch(e){
     console.log(e);
     res.render('error_index',{auth:"false"} );

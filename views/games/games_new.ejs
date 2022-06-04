@@ -1,0 +1,8 @@
+<%- include('partials/_header'); %>
+<% if(isAuthenticated) { %>
+    <%- include("partials/_navbar_reg"); %>
+<% } else {  %> 
+    <%- include("partials/_navbar_name"); %>
+<% } %> 
+<%- include('games_new_section'); %>
+<%- include('partials/_footer'); %>
