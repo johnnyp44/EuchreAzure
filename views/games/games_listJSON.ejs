@@ -1,0 +1,26 @@
+<section class="white-section" id="players">
+    <div id="players-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2> Games</h2>
+          <% for (var i=0; i<AllGames.length; i++){ %>
+            <div class="players">
+              <p>
+                <%= AllGames[i].gameID  %> -
+                <%= AllGames[i].gameDate %> - 
+                <%= AllGames[i].leagueID %>
+              </p>
+            </div>
+          <% } %>
+        </div>
+      <a class="carousel-control-prev" href="#players-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#players-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  

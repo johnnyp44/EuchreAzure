@@ -22,7 +22,7 @@ function isAuthenticated(req, res, next) {
 router.get('/id',
     isAuthenticated, // check if user is authenticated
     async function (req, res, next) {
-        res.render('index_id', { 
+        res.render('users/index_id', { 
           isAuthenticated: req.session.isAuthenticated,
           username: req.session.account?.username,
           fullName: req.session.account?.name,
@@ -36,7 +36,7 @@ router.get('/profile',
     async function (req, res, next) {
         try {
             const graphResponse = await fetch(GRAPH_ME_ENDPOINT, req.session.accessToken);
-            res.render('index_profile', { 
+            res.render('users/index_profile', { 
                 profile: graphResponse,
                 isAuthenticated: req.session.isAuthenticated,
                 username: req.session.account?.username,

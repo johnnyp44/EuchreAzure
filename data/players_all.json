@@ -104,7 +104,13 @@
       {"gameID":97,"playerID":1,"score":2,"winLoss":"L","leagueID":1,"createdAt": "2022-04-07T03:25:48.653Z","updatedAt": "2022-04-07T03:25:48.653Z"}, 
       {"gameID":98,"playerID":1,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2022-04-14T03:43:58.154Z","updatedAt": "2022-04-14T03:43:58.154Z"}, 
       {"gameID":99,"playerID":1,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2022-04-21T04:03:05.810Z","updatedAt": "2022-04-21T04:03:05.810Z"}, 
-     {"gameID":100,"playerID":1,"score":4,"winLoss":"L","leagueID":1,"createdAt":"2022-05-19T04:14:16.968Z","updatedAt":"2022-05-19T04:14:16.968Z"}
+     {"gameID":100,"playerID":1,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2022-05-19T04:14:16.968Z","updatedAt": "2022-05-19T04:14:16.968Z"},
+     {"gameID":101,"playerID":1,"score":21,"winLoss":"L","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":102,"playerID":1,"score":25,"winLoss":"W","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":103,"playerID":1,"score":23,"winLoss":"L","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":104,"playerID":1,"score":27,"winLoss":"L","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":105,"playerID":1,"score":21,"winLoss":"L","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":106,"playerID":1,"score":32,"winLoss":"W","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"}
     ],
     "leaguesOwned":[1,2]
   },
@@ -213,7 +219,13 @@
       {"gameID":97,"playerID":2,"score":2,"winLoss":"L","leagueID":1,"createdAt": "2022-04-07T03:25:48.557Z","updatedAt": "2022-04-07T03:25:48.557Z"}, 
       {"gameID":98,"playerID":2,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2022-04-14T03:43:58.084Z","updatedAt": "2022-04-14T03:43:58.084Z"}, 
       {"gameID":99,"playerID":2,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2022-04-21T04:03:05.682Z","updatedAt": "2022-04-21T04:03:05.682Z"}, 
-     {"gameID":100,"playerID":2,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-05-19T04:14:17.029Z","updatedAt": "2022-05-19T04:14:17.029Z"}
+     {"gameID":100,"playerID":2,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-05-19T04:14:17.029Z","updatedAt": "2022-05-19T04:14:17.029Z"},
+     {"gameID":101,"playerID":2,"score":24,"winLoss":"W","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":102,"playerID":2,"score":18,"winLoss":"L","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":103,"playerID":2,"score":23,"winLoss":"L","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":104,"playerID":2,"score":27,"winLoss":"L","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":105,"playerID":2,"score":28,"winLoss":"W","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":106,"playerID":2,"score":14,"winLoss":"L","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"}
     ]
   },
   {"playerID":3,
@@ -281,7 +293,6 @@
       {"gameID":58,"playerID":3,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-06-09T12:00:00.001Z","updatedAt": "2021-06-09T12:00:00.001Z"},
       {"gameID":59,"playerID":3,"score":5,"winLoss":"L","leagueID":1,"createdAt": "2021-06-16T12:00:00.001Z","updatedAt": "2021-06-16T12:00:00.001Z"},
       {"gameID":60,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-06-30T12:00:00.001Z","updatedAt": "2021-06-30T12:00:00.001Z"},
-
       {"gameID":61,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-07-07T12:00:00.001Z","updatedAt": "2021-07-07T12:00:00.001Z"},
       {"gameID":62,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-07-15T03:12:48.807Z","updatedAt": "2021-07-15T03:12:48.807Z"},       
       {"gameID":63,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-07-22T03:39:44.611Z","updatedAt": "2021-07-22T03:39:44.611Z"}, 
@@ -292,7 +303,6 @@
       {"gameID":68,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-08-26T03:36:26.608Z","updatedAt": "2021-08-26T03:36:26.608Z"}, 
       {"gameID":69,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-09-02T02:56:37.499Z","updatedAt": "2021-09-02T02:56:37.499Z"}, 
       {"gameID":70,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-09-09T03:08:26.523Z","updatedAt": "2021-09-09T03:08:26.523Z"}, 
-
       {"gameID":71,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-09-16T03:37:26.472Z","updatedAt": "2021-09-16T03:37:26.472Z"}, 
       {"gameID":72,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-09-23T03:51:28.016Z","updatedAt": "2021-09-23T03:51:28.016Z"}, 
       {"gameID":73,"playerID":3,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-09-30T03:18:45.670Z","updatedAt": "2021-09-30T03:18:45.670Z"}, 
@@ -303,7 +313,6 @@
       {"gameID":78,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-11-11T04:24:28.257Z","updatedAt": "2021-11-11T04:24:28.257Z"}, 
       {"gameID":79,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-12-02T04:16:25.391Z","updatedAt": "2021-12-02T04:16:25.391Z"}, 
       {"gameID":80,"playerID":3,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-12-09T05:10:37.089Z","updatedAt": "2021-12-09T05:10:37.089Z"},
-
       {"gameID":81,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2021-12-16T04:01:35.437Z","updatedAt": "2021-12-16T04:01:35.437Z"}, 
       {"gameID":82,"playerID":3,"score":3,"winLoss":"L","leagueID":1,"createdAt": "2021-12-23T04:07:07.913Z","updatedAt": "2021-12-23T04:07:07.913Z"}, 
       {"gameID":83,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2021-12-30T04:47:00.925Z","updatedAt": "2021-12-30T04:47:00.925Z"}, 
@@ -314,7 +323,6 @@
       {"gameID":88,"playerID":3,"score":2,"winLoss":"L","leagueID":1,"createdAt": "2022-02-03T03:45:00.044Z","updatedAt": "2022-02-03T03:45:00.044Z"}, 
       {"gameID":89,"playerID":3,"score":8,"winLoss":"W","leagueID":1,"createdAt": "2022-02-10T03:45:00.044Z","updatedAt": "2022-02-10T03:45:00.044Z"}, 
       {"gameID":90,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-02-17T04:18:56.269Z","updatedAt": "2022-02-17T04:18:56.269Z"},
-
       {"gameID":91,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-02-25T04:50:03.652Z","updatedAt": "2022-02-25T04:50:03.652Z"}, 
       {"gameID":92,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2022-03-03T04:50:56.580Z","updatedAt": "2022-03-03T04:50:56.580Z"},
       {"gameID":93,"playerID":3,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2022-03-10T04:41:46.962Z","updatedAt": "2022-03-10T04:41:46.962Z"}, 
@@ -324,7 +332,13 @@
       {"gameID":97,"playerID":3,"score":8,"winLoss":"W","leagueID":1,"createdAt": "2022-04-07T03:25:48.653Z","updatedAt": "2022-04-07T03:25:48.653Z"}, 
       {"gameID":98,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-04-14T03:43:58.154Z","updatedAt": "2022-04-14T03:43:58.154Z"}, 
       {"gameID":99,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-04-21T04:03:05.810Z","updatedAt": "2022-04-21T04:03:05.810Z"}, 
-     {"gameID":100,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt":"2022-05-19T04:14:16.968Z","updatedAt":"2022-05-19T04:14:16.968Z"}
+     {"gameID":100,"playerID":3,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-05-19T04:14:16.968Z","updatedAt": "2022-05-19T04:14:16.968Z"},
+     {"gameID":101,"playerID":3,"score":21,"winLoss":"L","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":102,"playerID":3,"score":18,"winLoss":"L","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":103,"playerID":3,"score":33,"winLoss":"W","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":104,"playerID":3,"score":29,"winLoss":"W","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":105,"playerID":3,"score":28,"winLoss":"W","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":106,"playerID":3,"score":32,"winLoss":"W","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"}    
     ]
   },
   {"playerID":4,
@@ -429,7 +443,13 @@
       {"gameID":97,"playerID":4,"score":8,"winLoss":"W","leagueID":1,"createdAt": "2022-04-07T03:25:48.653Z","updatedAt": "2022-04-07T03:25:48.653Z"}, 
       {"gameID":98,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-04-14T03:43:58.154Z","updatedAt": "2022-04-14T03:43:58.154Z"}, 
       {"gameID":99,"playerID":4,"score":6,"winLoss":"W","leagueID":1,"createdAt": "2022-04-21T04:03:05.810Z","updatedAt": "2022-04-21T04:03:05.810Z"}, 
-     {"gameID":100,"playerID":4,"score":4,"winLoss":"L","leagueID":1,"createdAt":"2022-05-19T04:14:16.968Z","updatedAt":"2022-05-19T04:14:16.968Z"}
+     {"gameID":100,"playerID":4,"score":4,"winLoss":"L","leagueID":1,"createdAt": "2022-05-19T04:14:16.968Z","updatedAt": "2022-05-19T04:14:16.968Z"},
+     {"gameID":101,"playerID":4,"score":24,"winLoss":"W","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":102,"playerID":4,"score":25,"winLoss":"W","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":103,"playerID":4,"score":33,"winLoss":"W","leagueID":3,"createdAt":"2022-05-26T04:14:16.968Z","updatedAt": "2022-05-26T04:14:16.968Z"},
+     {"gameID":104,"playerID":4,"score":29,"winLoss":"W","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":105,"playerID":4,"score":21,"winLoss":"L","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"},
+     {"gameID":106,"playerID":4,"score":14,"winLoss":"L","leagueID":3,"createdAt":"2022-06-02T04:14:16.968Z","updatedAt": "2022-06-02T04:14:16.968Z"}
     ]
   },
   {"playerID":5,

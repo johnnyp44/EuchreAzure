@@ -2,16 +2,16 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= fullName %></a>
               <div class="dropdown-menu">
-                <div class="dropdown-header">Tools</div>
-                <a class="dropdown-item" href="/games/new">New Game</a>
-                <a class="dropdown-item" href="/logout">Logout</a>
-                <div class="dropdown-header">Admin</div>
-                <a class="dropdown-item" href="/players/list">Players JSON</a>
-                <a class="dropdown-item" href="/games/listJSON">Games JSON</a>
-                <% if (username == "john@qcrf.org") { %>
-                  <a class="dropdown-item" href="/users/id">ID</a>
-                  <a class="dropdown-item" href="/users/profile">Profile</a>
-                <% } %>
+                  <div class="dropdown-header">Tools</div>
+                    <a class="dropdown-item" href="/games/new">New Game</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                  <div class="dropdown-header">Admin</div>
+                    <a class="dropdown-item" href="/players/listJSON">Players JSON</a>
+                    <a class="dropdown-item" href="/games/listJSON">Games JSON</a>
+                    <% if (username == "john@qcrf.org") { %>
+                      <a class="dropdown-item" href="/users/id">ID</a>
+                      <a class="dropdown-item" href="/users/profile">Profile</a>
+                    <% } %>
               </div>
           </li>
         </ul>

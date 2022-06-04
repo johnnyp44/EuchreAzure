@@ -3,13 +3,21 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
-    title: 'EuchreStats',
-    isAuthenticated: req.session.isAuthenticated,
-    username: req.session.account?.username,
-    fullName: req.session.account?.name
-  });
-  console.log("Index Router = user is " + req.session.account?.username);
+  try{
+    res.render('index', {
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
+    console.log("Index Router = user is " + req.session.account?.username);
+  }catch(e){
+    console.log(e);
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
+  }
 });
 
 module.exports = router;

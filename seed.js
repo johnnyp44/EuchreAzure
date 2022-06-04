@@ -1,14 +1,12 @@
-//const Post = require("./models/Post");
 const Game       = require("./models/Game");
 const League     = require("./models/League");
 const Player     = require("./models/Player");
-//const Post       = require("./models/Post");
 const gameData   = require("./data/games.json");
 const leagueData = require("./data/leagues.json");
 const playerData = require("./data/players_all.json");
-//const postData   = require("./data/post.json");
 
-require("./config")();
+require('dotenv').config();
+require("./dbConfig")();
 
 const seedPlayers = async () => {
   try {
@@ -37,19 +35,9 @@ const seedLeagues = async () => {
   }
 };
 
-const seedPosts = async () => {
-  try {
-    await Post.insertMany(postData);
-    console.log("post data seeded");
-  } catch (err) {
-    console.log(err.message);
-  }
-};
 
-
-//seedPosts();
-//seedLeagues();
-//seedGames();
+seedLeagues();
+seedGames();
 seedPlayers();
 
 //process.exit();

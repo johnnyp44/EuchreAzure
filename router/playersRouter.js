@@ -7,11 +7,11 @@ const playersRouter = express.Router();
 
 const Player = require("../models/Player");
 
-playersRouter.get('/list', async function(req, res, next) {
+playersRouter.get('/listJSON', async function(req, res, next) {
   try{
     console.log("Router is: /players/list");
     const Players = await Player.find().exec();
-    res.render('index_players', {
+    res.render('players/index_listJSON', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
       fullName: req.session.account?.name,
@@ -19,7 +19,11 @@ playersRouter.get('/list', async function(req, res, next) {
     });
   }catch(e){
     console.log(e);
-    res.render('index_error');
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
   }
 });
 

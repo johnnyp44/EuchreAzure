@@ -3,8 +3,6 @@ const express = require('express');
 
 const leaderBoardRouter = express.Router();
 
-//console.log("In Games Router");
-
 leaderBoardRouter.use((req, res, next) => {
   if(
     ['POST', 'PUT', 'PATCH'].indexOf(req.method) !== -1 &&
@@ -14,11 +12,14 @@ leaderBoardRouter.use((req, res, next) => {
   }
   return next();
 });
-
-
-//IDEA ONE
+/////////////////////////////////////////////////////////////////////////////
+//MODELS         ////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 const Player = require("../models/Player");
 
+/////////////////////////////////////////////////////////////////////////////
+//MODELS         ////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 leaderBoardRouter.get('/', async function(req, res, next) {
   try {
     console.log("Router is: /leaderBoardRouter");
@@ -69,7 +70,7 @@ leaderBoardRouter.get('/', async function(req, res, next) {
     OG150PlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
 
     //console.log("PlayerData in leaderboard ", OGPlayersData);
-    res.render('index_leaders', {
+    res.render('leaders/index', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
       fullName: req.session.account?.name,
@@ -79,7 +80,11 @@ leaderBoardRouter.get('/', async function(req, res, next) {
     });
   }catch(e){
     console.log(e);
-    res.render('error_index',{auth:"false"} );
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
   }
 });
 

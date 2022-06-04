@@ -1,0 +1,9 @@
+<%- include('../_partials/_header') %>
+<%- include('../_partials/_navbar') %> 
+<% if (isAuthenticated) { %>
+    <%- include('../_partials/_navbar_auth'); %>
+<% } else { %>
+    <%- include('../_partials/_navbar_noauth'); %>
+<% } %>  
+<%- include('leaderboards'); %>
+<%- include('../_partials/_footer'); %>

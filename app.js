@@ -72,7 +72,11 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('index/error');
+  res.render('error/index',{
+    isAuthenticated: req.session.isAuthenticated,
+    username: req.session.account?.username,
+    fullName: req.session.account?.name,
+  });
 });
 
 const port = process.env.PORT || 3000;

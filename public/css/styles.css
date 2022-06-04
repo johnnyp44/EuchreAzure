@@ -11,6 +11,7 @@ body{
 }
 h1, h2, h3, h4, h5{
   font-family: 'Montserrat';
+  text-align: center;
 }
 p{
   color: #8f8f8f;
@@ -50,7 +51,7 @@ p{
   padding: 0 0 10px;
   background-color: #0f3057;
   position: relative;
-  z-index: +1;
+  z-index: +5;
 }
 .navbar-brand{
   font-family: 'Ubuntu', sans-serif;
@@ -58,6 +59,7 @@ p{
 }
 .nav-item{
   padding: 0 18px;
+  z-index: +6;
 }
 .nav-link{
   font-size: 1.1rem;

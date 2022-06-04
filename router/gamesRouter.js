@@ -6,10 +6,25 @@ const playersController = require('../controllers/playersController');
 
 const gamesRouter = express.Router();
 
+gamesRouter.use((req, res, next) => {
+  if(
+    [ 'PUT', 'PATCH'].indexOf(req.method) !== -1 &&
+    !req.is('json')
+  ){
+    return res.status(415).send('Content-Type must be application/json');
+  }
+  return next();
+});
+/////////////////////////////////////////////////////////////////////////////
+//MODELS         ////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 const Game   = require("../models/Game");
 const Player = require("../models/Player");
 const League = require("../models/League");
 
+/////////////////////////////////////////////////////////////////////////////
+//ROUTES         ////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 gamesRouter.get('/list', async function(req, res, next) {
   try{
     console.log("Router is: /games/list");
@@ -21,8 +36,7 @@ gamesRouter.get('/list', async function(req, res, next) {
     FamGames.sort(function(a,b){return b.gameID-a.gameID});
     const OG150Games = AllGames.filter(game => game.leagueID === 3);
     OG150Games.sort(function(a,b){return b.gameID-a.gameID});
-    res.render('index_games', {
-      title: 'EuchreStats',
+    res.render('games/index_list', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
       fullName: req.session.account?.name,
@@ -33,7 +47,11 @@ gamesRouter.get('/list', async function(req, res, next) {
     });
   }catch(e){
     console.log(e);
-    res.render('index_error');
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
   }
 });
 
@@ -42,7 +60,7 @@ gamesRouter.get('/listJSON', async function(req, res, next) {
     console.log("Router is: /games/listJSON");
     const AllGames = await Game.find().exec();
     AllGames.sort(function(a,b){return b.gameID-a.gameID});
-    res.render('index_gamesJSON', {
+    res.render('games/index_gamesJSON', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
       fullName: req.session.account?.name,
@@ -50,7 +68,11 @@ gamesRouter.get('/listJSON', async function(req, res, next) {
     });
   }catch(e){
     console.log(e);
-    res.render('index_error');
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name,
+    });
   }
 });
 
@@ -58,10 +80,9 @@ gamesRouter.get('/new', async function(req, res, next) {
   try{
     console.log("Router is: /games/new");
     const Players = await Player.find().exec();
-    //console.log(Players);
     const Leagues = await League.find().exec();
-    const calendar = new Calendar({year:2021, month:6}).toHTML();
-    res.render('games_new',{
+    const calendar = new Calendar({year:2022, month:6}).toHTML();
+    res.render('games/index_new',{
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
       fullName: req.session.account?.name,
@@ -71,6 +92,11 @@ gamesRouter.get('/new', async function(req, res, next) {
     });
   }catch(e){
     console.log(e);
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
   }
 });
 
@@ -91,6 +117,11 @@ gamesRouter.get('/update', async function(req, res, next) {
     });
   }catch(e){
     console.log(e);
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
   }
 });
 
@@ -98,7 +129,7 @@ gamesRouter.post('/gameConfirm', async function(req, res, next){
   try{
     const AllGames = await Game.find().exec();
     var maxID = (AllGames.sort((a, b) => b.gameID - a.gameID)[0].gameID) + 1;
-    //console.log("Max Game ID is: " + maxID);
+    console.log("Max Game ID is: " + maxID);
 
     var newGame = new Game({
       gameID: maxID,
@@ -116,6 +147,11 @@ gamesRouter.post('/gameConfirm', async function(req, res, next){
     res.redirect("/games/list");
   }catch(e){
     console.log(e);
+    res.render('error/index',{
+      isAuthenticated: req.session.isAuthenticated,
+      username: req.session.account?.username,
+      fullName: req.session.account?.name
+    });
   }
 });
 
