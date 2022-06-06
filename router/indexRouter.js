@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
       username: req.session.account?.username,
       fullName: req.session.account?.name
     });
-    console.log("Index Router = user is " + req.session.account?.username);
   }catch(e){
     console.log(e);
     res.render('error/index',{

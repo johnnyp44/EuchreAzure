@@ -1,0 +1,12 @@
+<section class="white-section" id="leagues">
+  <h2> Leagues</h2>
+  <% for (var i=0; i<Leagues.length; i++){ %>
+      <p>
+        <%= Leagues[i].leagueID  %> -
+        <%= Leagues[i].leagueName %> - 
+        <%= Leagues[i].createdAt.toISOString() %> - 
+        <%= Leagues[i].updatedAt.toISOString() %>
+      </p>
+  <% } %>
+</section>
+  

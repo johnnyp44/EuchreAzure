@@ -1,26 +1,19 @@
-<section class="white-section" id="players">
-    <div id="players-carousel" class="carousel slide" data-ride="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active container-fluid">
-          <h2> Games</h2>
-          <% for (var i=0; i<AllGames.length; i++){ %>
-            <div class="players">
-              <p>
-                <%= AllGames[i].gameID  %> -
-                <%= AllGames[i].gameDate %> - 
-                <%= AllGames[i].leagueID %>
-              </p>
-            </div>
-          <% } %>
-        </div>
-      <a class="carousel-control-prev" href="#players-carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#players-carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </section>
+<section class="white-section" id="games">
+  <h2>Games</h2>
+  <% for (var i=0; i<AllGames.length; i++){ %>
+      <p>
+        {"gameID":<%= AllGames[i].gameID  %>,
+         "gameDate":"<%= AllGames[i].gameDate.toISOString() %>",
+         "leagueID": <%= AllGames[i].leagueID %>,
+         "T1P1": <%= AllGames[i].T1P1 %>,
+         "T1P2": <%= AllGames[i].T1P2 %>,
+         "T2P1": <%= AllGames[i].T2P1 %>,
+         "T2P2": <%= AllGames[i].T2P2 %>,
+         "team1Score": <%= AllGames[i].team1Score %>,
+         "team2Score": <%= AllGames[i].team2Score %>,
+         "createdAt": <%= AllGames[i].createdAt.toISOString() %>,
+         "updatedAt": <%= AllGames[i].updatedAt.toISOString() %>},
+      </p>
+  <% } %>
+</section>
   

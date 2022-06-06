@@ -33,6 +33,7 @@ const authRoute    = require("./router/auth");
 const indexRoute   = require("./router/indexRouter");
 const playersRoute = require("./router/playersRouter");
 const gamesRoute   = require("./router/gamesRouter");
+const leaguesRoute = require("./router/leaguesRouter");
 const leadersRoute = require("./router/leaderBoardRouter");
 const usersRoute   = require("./router/users");
 
@@ -57,6 +58,7 @@ app.use('/games', gamesRoute);
 app.use('/leaderboards', leadersRoute);
 app.use('/users', usersRoute);
 app.use('/players', playersRoute);
+app.use('/leagues', leaguesRoute);
 
 
 // catch 404 and forward to error handler

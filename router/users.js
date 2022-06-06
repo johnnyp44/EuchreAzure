@@ -3,6 +3,7 @@
  * Licensed under the MIT License.
  */
 
+const emailApi = require('../helpers/email');
 var express = require('express');
 var router = express.Router();
 
@@ -18,6 +19,30 @@ function isAuthenticated(req, res, next) {
 
     next();
 };
+
+router.get('/email',
+    isAuthenticated,
+    async function (req, res, next) {
+    try{
+        console.log("Users Router = user is " + req.session.account?.username);
+        const useremail = req.session.account?.username;
+        await emailApi.sendTemplateEmail(useremail,'WELCOME_EMAIL');
+        console.log("email sent");
+        res.render('index', {
+            isAuthenticated: req.session.isAuthenticated,
+            username: req.session.account?.username,
+            fullName: req.session.account?.name
+        });
+    }catch(e){
+        console.log(e);
+        res.render('error/index',{
+            isAuthenticated: req.session.isAuthenticated,
+            username: req.session.account?.username,
+            fullName: req.session.account?.name,
+            error: e
+        });
+    }
+});
 
 router.get('/id',
     isAuthenticated, // check if user is authenticated
