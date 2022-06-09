@@ -27,8 +27,8 @@ function updatePlayerData(player){
 
 exports.addGame = function(game){
   console.log("In players controller - addGame");
-  const t1result = (game.team1Score > game.team2Score) ? ("W") : ("L");
-  const t2result = (game.team1Score > game.team2Score) ? ("L") : ("W");
+  const t1result = (game.team1Score == game.team2Score)? ("T") : (game.team1Score > game.team2Score) ? ("W") : ("L");
+  const t2result = (game.team1Score == game.team2Score)? ("T") : (game.team1Score > game.team2Score) ? ("L") : ("W");
   const player1 = {gameID:game.gameID,playerID:game.T1P1,score:game.team1Score,winLoss : t1result,leagueID:game.leagueID};
   const player2 = {gameID:game.gameID,playerID:game.T1P2,score:game.team1Score,winLoss : t1result,leagueID:game.leagueID};
   const player3 = {gameID:game.gameID,playerID:game.T2P1,score:game.team2Score,winLoss : t2result,leagueID:game.leagueID};

@@ -15,6 +15,17 @@ gamesRouter.use((req, res, next) => {
   }
   return next();
 });
+
+function isAuthenticated(req, res, next) {
+  if (!req.session.isAuthenticated) {
+      return res.redirect('/auth/signin'); // redirect to sign-in route
+  }
+
+  next();
+};
+
+var NO_PAGE = 'That page does not exist.';
+
 /////////////////////////////////////////////////////////////////////////////
 //MODELS         ////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
@@ -25,7 +36,7 @@ const League = require("../models/League");
 /////////////////////////////////////////////////////////////////////////////
 //ROUTES         ////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
-gamesRouter.get('/list', async function(req, res, next) {
+gamesRouter.get(['/','/list'], async function(req, res, next) {
   try{
     console.log("Router is: /games/list");
     const AllGames = await Game.find().exec();
@@ -50,16 +61,20 @@ gamesRouter.get('/list', async function(req, res, next) {
     res.render('error/index',{
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
-      fullName: req.session.account?.name
+      fullName: req.session.account?.name,
+      error: e,
+      CustomErrorMessage: ""
     });
   }
 });
 
-gamesRouter.get('/listJSON', async function(req, res, next) {
+gamesRouter.get('/listJSON', 
+  isAuthenticated, 
+  async function(req, res, next) {
   try{
     console.log("Router is: /games/listJSON");
     const AllGames = await Game.find().exec();
-    AllGames.sort(function(a,b){return a.gameID-b.gameID});
+    AllGames.sort(function(a,b){return b.gameID - a.gameID});
     res.render('games/index_gamesJSON', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
@@ -72,11 +87,15 @@ gamesRouter.get('/listJSON', async function(req, res, next) {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
       fullName: req.session.account?.name,
+      error: e,
+      CustomErrorMessage: ""
     });
   }
 });
 
-gamesRouter.get('/new', async function(req, res, next) {
+gamesRouter.get('/new',
+  isAuthenticated,
+  async function(req, res, next) { 
   try{
     console.log("Router is: /games/new");
     const Players = await Player.find().exec();
@@ -95,7 +114,9 @@ gamesRouter.get('/new', async function(req, res, next) {
     res.render('error/index',{
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
-      fullName: req.session.account?.name
+      fullName: req.session.account?.name,
+      error: e,
+      CustomErrorMessage: ""
     });
   }
 });
@@ -120,12 +141,16 @@ gamesRouter.get('/update', async function(req, res, next) {
     res.render('error/index',{
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
-      fullName: req.session.account?.name
+      fullName: req.session.account?.name,
+      error: e,
+      CustomErrorMessage: ""
     });
   }
 });
 
-gamesRouter.post('/gameConfirm', async function(req, res, next){
+gamesRouter.post('/gameConfirm', 
+isAuthenticated, 
+async function(req, res, next){
   try{
     const AllGames = await Game.find().exec();
     var maxID = (AllGames.sort((a, b) => b.gameID - a.gameID)[0].gameID) + 1;
@@ -142,7 +167,7 @@ gamesRouter.post('/gameConfirm', async function(req, res, next){
       team1Score: req.body.t1Score,
       team2Score: req.body.t2Score
     });
-    gamesController.addGame(newGame);  //it works - just uncomment the line
+    gamesController.addGame(newGame); 
     playersController.addGame(newGame);
     res.redirect("/games/list");
   }catch(e){
@@ -150,7 +175,9 @@ gamesRouter.post('/gameConfirm', async function(req, res, next){
     res.render('error/index',{
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
-      fullName: req.session.account?.name
+      fullName: req.session.account?.name,
+      error: e,
+      CustomErrorMessage: ""
     });
   }
 });

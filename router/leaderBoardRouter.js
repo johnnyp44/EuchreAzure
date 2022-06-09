@@ -63,6 +63,7 @@ leaderBoardRouter.get('/', async function(req, res, next) {
                 "playerID"   : {"$first": "$playerID"},
                 "gamesWon"   : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","W"]},1,0]}},
                 "gamesLost"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","L"]},1,0]}},
+                "gamesTied"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","T"]},1,0]}},
                 //"totalGames" : {"$sum": ["gamesWon", "gamesLost"]}, //not working yet
                 "totalScore" : {"$sum": "$gamesPlayed.score"}
       }}

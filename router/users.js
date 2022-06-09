@@ -39,7 +39,8 @@ router.get('/email',
             isAuthenticated: req.session.isAuthenticated,
             username: req.session.account?.username,
             fullName: req.session.account?.name,
-            error: e
+            error: e,
+            CustomErrorMessage: ""
         });
     }
 });

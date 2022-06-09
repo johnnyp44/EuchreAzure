@@ -14,7 +14,9 @@ router.get('/', function(req, res, next) {
     res.render('error/index',{
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
-      fullName: req.session.account?.name
+      fullName: req.session.account?.name,
+      error: e,
+      CustomErrorMessage: ""
     });
   }
 });

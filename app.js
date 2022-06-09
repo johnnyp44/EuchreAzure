@@ -60,6 +60,7 @@ app.use('/users', usersRoute);
 app.use('/players', playersRoute);
 app.use('/leagues', leaguesRoute);
 
+var NO_PAGE = 'That page does not exist.';
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -78,6 +79,8 @@ app.use(function (err, req, res, next) {
     isAuthenticated: req.session.isAuthenticated,
     username: req.session.account?.username,
     fullName: req.session.account?.name,
+    error: res.locals.message,
+    CustomErrorMessage : NO_PAGE,
   });
 });
 
