@@ -70,6 +70,22 @@ leaderBoardRouter.get('/', async function(req, res, next) {
       ]).exec();
     OG150PlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
 
+    //LEAGUE 4
+    const FamilyRRPlayersData = await Player.aggregate([
+      {$unwind: "$gamesPlayed"},
+      {$match: {"gamesPlayed.leagueID":4}},
+      {$group: {"_id"        : "$_id",
+                "firstName"  : {"$first": "$firstName" },
+                "playerID"   : {"$first": "$playerID"},
+                "gamesWon"   : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","W"]},1,0]}},
+                "gamesLost"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","L"]},1,0]}},
+                "gamesTied"  : {"$sum": {$cond:[{"$eq":["$gamesPlayed.winLoss","T"]},1,0]}},
+                //"totalGames" : {"$sum": ["gamesWon", "gamesLost"]}, //not working yet
+                "totalScore" : {"$sum": "$gamesPlayed.score"}
+      }}
+      ]).exec();
+    FamilyRRPlayersData.sort(function(a, b){return b.totalScore-a.totalScore});
+
     //console.log("PlayerData in leaderboard ", OGPlayersData);
     res.render('leaders/index', {
       isAuthenticated: req.session.isAuthenticated,
@@ -77,7 +93,8 @@ leaderBoardRouter.get('/', async function(req, res, next) {
       fullName: req.session.account?.name,
       OGPlayerData:OGPlayersData,
       FamPlayerData:FamPlayersData,
-      OG150PlayerData:OG150PlayersData
+      OG150PlayerData:OG150PlayersData,
+      FamilyRRPlayerData: FamilyRRPlayersData
     });
   }catch(e){
     console.log(e);

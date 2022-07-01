@@ -9,7 +9,7 @@ var router = express.Router();
 
 var fetch = require('../fetch');
 
-var { GRAPH_ME_ENDPOINT } = require('../authConfig');
+var { GRAPH_ME_ENDPOINT, GRAPH_GROUPS_ENDPOINT } = require('../authConfig');
 
 // custom middleware to check auth state
 function isAuthenticated(req, res, next) {
@@ -74,4 +74,21 @@ router.get('/profile',
     }
 );
 
+router.get('/groups',
+    isAuthenticated, // check if user is authenticated
+    async function (req, res, next) {
+        try {
+            console.log("in users/groups");
+            const graphResponse = await fetch(GRAPH_GROUPS_ENDPOINT, req.session.accessToken);
+            res.render('users/index_groups', { 
+                groups: graphResponse,
+                isAuthenticated: req.session.isAuthenticated,
+                username: req.session.account?.username,
+                fullName: req.session.account?.name
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
+);
 module.exports = router;

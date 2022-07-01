@@ -6,7 +6,7 @@ const leagueData = require("./data/leagues.json");
 const playerData = require("./data/players_all.json");
 
 require('dotenv').config();
-require("./dbConfig")();
+require("./dbAzureConfig")();
 
 const seedPlayers = async () => {
   try {
@@ -37,7 +37,7 @@ const seedLeagues = async () => {
 
 
 seedLeagues();
-seedGames();
-seedPlayers();
+//seedGames();
+//seedPlayers();
 
 //process.exit();

@@ -47,6 +47,8 @@ gamesRouter.get(['/','/list'], async function(req, res, next) {
     FamGames.sort(function(a,b){return b.gameID-a.gameID});
     const OG150Games = AllGames.filter(game => game.leagueID === 3);
     OG150Games.sort(function(a,b){return b.gameID-a.gameID});
+    const FamilyRRGames = AllGames.filter(game => game.leagueID === 4);
+    FamilyRRGames.sort(function(a,b){return b.gameID-a.gameID});
     res.render('games/index_list', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
@@ -54,6 +56,7 @@ gamesRouter.get(['/','/list'], async function(req, res, next) {
       OGGames:OGGames,
       FamGames:FamGames,
       OG150Games:OG150Games,
+      FamilyRRGames: FamilyRRGames,
       Players:Players
     });
   }catch(e){

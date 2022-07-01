@@ -102,5 +102,11 @@
  {"gameID":103,"gameDate":"2022-05-25","leagueID":3,"T1P1":1,"T1P2":2,"T2P1":3,"T2P2":4,"team1Score":23,"team2Score":33,"createdAt": "2022-05-26T04:14:16.781Z","updatedAt": "2022-05-26T04:14:16.781Z"},
  {"gameID":104,"gameDate":"2022-06-01","leagueID":3,"T1P1":1,"T1P2":2,"T2P1":3,"T2P2":4,"team1Score":27,"team2Score":29,"createdAt": "2022-06-01T04:14:16.781Z","updatedAt": "2022-06-01T04:14:16.781Z"},
  {"gameID":105,"gameDate":"2022-06-01","leagueID":3,"T1P1":1,"T1P2":4,"T2P1":2,"T2P2":3,"team1Score":21,"team2Score":28,"createdAt": "2022-06-01T04:14:16.781Z","updatedAt": "2022-06-01T04:14:16.781Z"},
- {"gameID":106,"gameDate":"2022-06-01","leagueID":3,"T1P1":1,"T1P2":3,"T2P1":2,"T2P2":4,"team1Score":32,"team2Score":14,"createdAt": "2022-06-01T04:14:16.781Z","updatedAt": "2022-06-01T04:14:16.781Z"}
+ {"gameID":106,"gameDate":"2022-06-01","leagueID":3,"T1P1":1,"T1P2":3,"T2P1":2,"T2P2":4,"team1Score":32,"team2Score":14,"createdAt": "2022-06-01T04:14:16.781Z","updatedAt": "2022-06-01T04:14:16.781Z"},
+ {"gameID":107,"gameDate":"2022-06-08","leagueID":3,"T1P1":1,"T1P2":2,"T2P1":3,"T2P2":4,"team1Score":23,"team2Score":24,"createdAt": "2022-06-09T20:53:45.056Z","updatedAt": "2022-06-09T20:53:45.057Z"},
+ {"gameID":108,"gameDate":"2022-06-08","leagueID":3,"T1P1":1,"T1P2":4,"T2P1":2,"T2P2":3,"team1Score":27,"team2Score":27,"createdAt": "2022-06-09T20:56:27.777Z","updatedAt": "2022-06-09T20:56:27.777Z"},
+ {"gameID":109,"gameDate":"2022-06-08","leagueID":3,"T1P1":1,"T1P2":3,"T2P1":2,"T2P2":4,"team1Score":27,"team2Score":27,"createdAt": "2022-06-09T20:57:06.373Z","updatedAt": "2022-06-09T20:57:06.373Z"},
+ {"gameID":110,"gameDate":"2022-06-15","leagueID":3,"T1P1":1,"T1P2":2,"T2P1":3,"T2P2":4,"team1Score":27,"team2Score":25,"createdAt": "2022-06-16T03:51:25.423Z","updatedAt": "2022-06-16T03:51:25.423Z"},
+ {"gameID":111,"gameDate":"2022-06-15","leagueID":3,"T1P1":1,"T1P2":4,"T2P1":2,"T2P2":3,"team1Score":26,"team2Score":24,"createdAt": "2022-06-16T03:53:16.206Z","updatedAt": "2022-06-16T03:53:16.206Z"},
+ {"gameID":112,"gameDate":"2022-06-15","leagueID":3,"T1P1":1,"T1P2":3,"T2P1":2,"T2P2":4,"team1Score":27,"team2Score":22,"createdAt": "2022-06-16T03:54:30.424Z","updatedAt": "2022-06-16T03:54:30.431Z"}
 ]

@@ -10,7 +10,7 @@ var logger = require('morgan');
 
 const appInsights = require("applicationinsights");
 
-require("./dbConfig")();
+require("./dbAzureConfig")();
 
 //Azure Portal Application Insights
 appInsights.setup('327fb52c-4445-40be-8bac-247428924e13').start();
