@@ -77,7 +77,7 @@ gamesRouter.get('/listJSON',
   try{
     console.log("Router is: /games/listJSON");
     const AllGames = await Game.find().exec();
-    AllGames.sort(function(a,b){return b.gameID - a.gameID});
+    AllGames.sort(function(a,b){return a.gameID - b.gameID});
     res.render('games/index_gamesJSON', {
       isAuthenticated: req.session.isAuthenticated,
       username: req.session.account?.username,
